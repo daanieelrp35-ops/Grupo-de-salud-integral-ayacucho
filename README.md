@@ -1,4 +1,4 @@
-# Grupo-de-salud-integral-ayacucho
+
 :root{--primary:#0f5ba7;--accent:#28b463;--bg:#f5f7fa}
 *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:#1f2937}
 header{background:#fff;position:sticky;top:0;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.08)}
