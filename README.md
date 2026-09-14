@@ -3,9 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo Salud Integral Ayacucho</title>
+<meta name="description" content="Grupo Salud Integral Ayacucho - Más de 30 años de atención médica integral en Córdoba Capital. Especialidades en Psicología, Pediatría, Nutrición, Odontología, Kinesiología y Fonoaudiología.">
+<meta name="keywords" content="médicos Córdoba, especialidades médicas, turnos online, salud integral, pediatría, psicología">
+<meta property="og:title" content="Grupo Salud Integral Ayacucho">
+<meta property="og:description" content="Atención médica profesional con 30+ años de experiencia en Córdoba Capital">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tu-dominio.com">
+<meta name="theme-color" content="#0F5BA7">
+<meta name="robots" content="index, follow">
 
+<title>Grupo Salud Integral Ayacucho - Atención Médica Integral</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%230F5BA7'>✓</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -16,6 +27,8 @@
 --light:#F5F7FA;
 --dark:#1E293B;
 --white:#FFFFFF;
+--hover-primary:#0a3f7a;
+--hover-secondary:#1f8e4a;
 }
 
 *{
@@ -25,9 +38,14 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#fff;
 color:var(--dark);
+line-height:1.6;
 }
 
 header{
@@ -52,25 +70,38 @@ align-items:center;
 font-size:24px;
 font-weight:700;
 color:var(--primary);
+cursor:pointer;
 }
 
 .menu{
 display:flex;
-gap:20px;
+gap:30px;
 }
 
 .menu a{
 text-decoration:none;
 color:var(--dark);
 font-weight:500;
+transition:color .3s ease;
+}
+
+.menu a:hover{
+color:var(--primary);
 }
 
 .btn-turno{
 background:var(--secondary);
 color:white;
-padding:10px 20px;
+padding:12px 24px;
 border-radius:30px;
 text-decoration:none;
+transition:all .3s ease;
+border:2px solid var(--secondary);
+}
+
+.btn-turno:hover{
+background:var(--hover-secondary);
+border-color:var(--hover-secondary);
 }
 
 .hero{
@@ -96,16 +127,20 @@ font-size:55px;
 line-height:1.1;
 color:var(--primary);
 margin-bottom:20px;
+font-weight:700;
 }
 
 .hero p{
-font-size:20px;
+font-size:18px;
 margin-bottom:30px;
+color:#555;
+line-height:1.8;
 }
 
 .hero-buttons{
 display:flex;
 gap:15px;
+flex-wrap:wrap;
 }
 
 .btn-primary{
@@ -114,6 +149,16 @@ color:white;
 padding:15px 30px;
 border-radius:40px;
 text-decoration:none;
+transition:all .3s ease;
+border:2px solid var(--primary);
+font-weight:600;
+display:inline-block;
+}
+
+.btn-primary:hover{
+background:var(--hover-primary);
+border-color:var(--hover-primary);
+transform:translateY(-2px);
 }
 
 .btn-secondary{
@@ -122,11 +167,23 @@ padding:15px 30px;
 border-radius:40px;
 text-decoration:none;
 color:var(--primary);
+transition:all .3s ease;
+font-weight:600;
+display:inline-block;
+}
+
+.btn-secondary:hover{
+background:var(--primary);
+color:white;
+transform:translateY(-2px);
 }
 
 .hero-image img{
 width:100%;
 border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+max-height:500px;
+object-fit:cover;
 }
 
 .section{
@@ -143,33 +200,50 @@ margin-bottom:50px;
 .section-title h2{
 font-size:40px;
 color:var(--primary);
+font-weight:700;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#666;
+font-size:16px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
 border-radius:20px;
-padding:25px;
+padding:30px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
+transition:all .3s ease;
+border:2px solid transparent;
 }
 
 .card:hover{
 transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+border-color:var(--primary);
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:15px;
 color:var(--primary);
+font-weight:700;
+font-size:20px;
+}
+
+.card p{
+color:#666;
+line-height:1.7;
 }
 
 .stats{
-background:#f7fbff;
+background:linear-gradient(135deg, #f7fbff 0%, #eefaf3 100%);
 padding:70px 20px;
 }
 
@@ -177,20 +251,48 @@ padding:70px 20px;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
 text-align:center;
+}
+
+.stat{
+padding:30px;
+background:white;
+border-radius:15px;
+box-shadow:0 3px 15px rgba(0,0,0,.05);
 }
 
 .stat h3{
 font-size:40px;
 color:var(--primary);
+font-weight:700;
+margin-bottom:10px;
+}
+
+.stat p{
+color:#666;
+font-weight:500;
 }
 
 .farmacia{
-background:#eefaf3;
+background:linear-gradient(135deg, #eefaf3 0%, #e8f5f0 100%);
 border-radius:30px;
-padding:40px;
+padding:50px;
+border-left:5px solid var(--secondary);
+}
+
+.farmacia h2{
+color:var(--primary);
+font-size:32px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.farmacia p{
+color:#666;
+font-size:16px;
+line-height:1.8;
 }
 
 .contacto{
@@ -199,15 +301,44 @@ background:#f5f7fa;
 
 .formulario{
 display:grid;
-gap:15px;
+gap:20px;
 max-width:600px;
 margin:auto;
 }
 
+.form-group{
+display:grid;
+gap:8px;
+}
+
+.form-group label{
+font-weight:600;
+color:var(--dark);
+font-size:14px;
+}
+
 input, textarea{
 padding:15px;
-border:1px solid #ddd;
+border:2px solid #ddd;
 border-radius:10px;
+font-size:14px;
+font-family:'Poppins',sans-serif;
+transition:border-color .3s ease;
+}
+
+input:focus, textarea:focus{
+outline:none;
+border-color:var(--primary);
+background-color:#f9fcff;
+}
+
+textarea{
+resize:vertical;
+min-height:120px;
+}
+
+input::placeholder, textarea::placeholder{
+color:#999;
 }
 
 button{
@@ -217,6 +348,19 @@ background:var(--secondary);
 color:white;
 border-radius:10px;
 cursor:pointer;
+font-weight:600;
+font-size:16px;
+transition:all .3s ease;
+}
+
+button:hover{
+background:var(--hover-secondary);
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(40,180,99,.3);
+}
+
+button:active{
+transform:translateY(0);
 }
 
 footer{
@@ -226,22 +370,153 @@ padding:50px 20px;
 text-align:center;
 }
 
-@media(max-width:768px){
-
-.hero-container{
-grid-template-columns:1fr;
+footer h3{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
 }
 
-.hero h1{
-font-size:40px;
+footer p{
+line-height:1.8;
+opacity:.9;
+}
+
+.contact-info{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.contact-info-item{
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.contact-info-item span{
+font-weight:600;
+opacity:.8;
+}
+
+.breadcrumb-nav{
+text-align:center;
+padding:20px;
+margin-bottom:30px;
+}
+
+.breadcrumb-nav a{
+color:var(--primary);
+text-decoration:none;
+margin:0 10px;
+font-size:14px;
+}
+
+.breadcrumb-nav a:hover{
+text-decoration:underline;
+}
+
+@media(max-width:1024px){
+
+.hero-container{
+gap:30px;
 }
 
 .stats-container{
 grid-template-columns:repeat(2,1fr);
 }
 
+.contact-info{
+gap:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-container{
+grid-template-columns:1fr;
+padding:20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.hero-image img{
+max-height:300px;
+}
+
+.stats-container{
+grid-template-columns:1fr;
+gap:20px;
+}
+
 .menu{
 display:none;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:20px;
+}
+
+.farmacia{
+padding:30px;
+}
+
+.contact-info{
+gap:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.navbar{
+padding:12px 15px;
+}
+
+.logo{
+font-size:18px;
+}
+
+.btn-turno{
+padding:10px 16px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn-primary, .btn-secondary{
+width:100%;
+text-align:center;
+}
+
+.section-title h2{
+font-size:26px;
 }
 
 }
@@ -256,17 +531,15 @@ display:none;
 
 <div class="navbar">
 
-<div class="logo">
-Grupo Salud Integral Ayacucho
+<div class="logo" onclick="document.location.href='#'">
+✓ Grupo Salud Integral
 </div>
 
 <nav class="menu">
-<a href="#">Inicio</a>
-<a href="especialidades.html">Especialidades</a>
-<a href="profesionales.html">Profesionales</a>
-<a href="farmacia.html">Farmacia</a>
-<a href="blog.html">Blog</a>
-<a href="contacto.html">Contacto</a>
+<a href="#inicio">Inicio</a>
+<a href="#especialidades">Especialidades</a>
+<a href="#farmacia">Farmacia</a>
+<a href="#contacto">Contacto</a>
 </nav>
 
 <a href="#contacto" class="btn-turno">
@@ -277,7 +550,7 @@ Solicitar Turno
 
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 
 <div class="hero-container">
 
@@ -286,7 +559,7 @@ Solicitar Turno
 <h1>Tu salud en manos de profesionales</h1>
 
 <p>
-Más de 30 años acompañando a las familias de Córdoba Capital con atención integral y personalizada.
+Más de 30 años acompañando a las familias de Córdoba Capital con atención integral y personalizada. Especialidades médicas, farmacia y asesoramiento profesional.
 </p>
 
 <div class="hero-buttons">
@@ -305,7 +578,7 @@ Solicitar Turno
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" alt="Doctora">
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" alt="Profesionales médicos de Grupo Salud Integral Ayacucho brindando atención" loading="lazy">
 
 </div>
 
@@ -317,38 +590,39 @@ Solicitar Turno
 
 <div class="section-title">
 <h2>Nuestras Especialidades</h2>
+<p>Atención integral de salud para toda la familia</p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h3>Psicología</h3>
-<p>Atención para niños, adolescentes y adultos.</p>
+<h3>🧠 Psicología</h3>
+<p>Atención especializada para niños, adolescentes y adultos. Evaluación, diagnóstico y tratamiento psicológico personalizado.</p>
 </div>
 
 <div class="card">
-<h3>Pediatría</h3>
-<p>Seguimiento integral de la salud infantil.</p>
+<h3>👨‍⚕️ Pediatría</h3>
+<p>Seguimiento integral de la salud infantil desde el nacimiento. Vacunaciones, control de crecimiento y desarrollo.</p>
 </div>
 
 <div class="card">
-<h3>Nutrición</h3>
-<p>Planes personalizados y educación alimentaria.</p>
+<h3>🥗 Nutrición</h3>
+<p>Planes nutricionales personalizados y educación alimentaria. Orientación para hábitos saludables y control de peso.</p>
 </div>
 
 <div class="card">
-<h3>Odontología</h3>
-<p>Salud bucal para toda la familia.</p>
+<h3>🦷 Odontología</h3>
+<p>Salud bucal para toda la familia. Limpieza, restauración, ortodoncia y tratamientos preventivos.</p>
 </div>
 
 <div class="card">
-<h3>Kinesiología</h3>
-<p>Rehabilitación y recuperación funcional.</p>
+<h3>💪 Kinesiología</h3>
+<p>Rehabilitación y recuperación funcional. Tratamiento de lesiones y reeducación del movimiento.</p>
 </div>
 
 <div class="card">
-<h3>Fonoaudiología</h3>
-<p>Lenguaje, comunicación y deglución.</p>
+<h3>🗣️ Fonoaudiología</h3>
+<p>Especialización en lenguaje, comunicación y deglución. Evaluación y terapia para todas las edades.</p>
 </div>
 
 </div>
@@ -371,28 +645,26 @@ Solicitar Turno
 
 <div class="stat">
 <h3>1000+</h3>
-<p>Pacientes</p>
+<p>Pacientes satisfechos</p>
 </div>
 
 <div class="stat">
 <h3>100%</h3>
-<p>Compromiso</p>
+<p>Compromiso con tu salud</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section" id="farmacia">
 
 <div class="farmacia">
 
 <h2>Nuestra Farmacia</h2>
 
-<br>
-
 <p>
-Medicamentos, dermocosmética, asesoramiento farmacéutico y atención personalizada.
+Medicamentos de calidad, productos dermocosmética premium, asesoramiento farmacéutico especializado y atención personalizada. Contamos con profesionales capacitados para orientarte en el uso correcto de medicamentos y complementos alimentarios.
 </p>
 
 </div>
@@ -403,17 +675,44 @@ Medicamentos, dermocosmética, asesoramiento farmacéutico y atención personali
 
 <div class="section-title">
 <h2>Solicitar Turno</h2>
+<p>Completa el formulario y nos pondremos en contacto pronto</p>
 </div>
 
-<form class="formulario">
+<form class="formulario" name="contacto" method="POST" action="https://formspree.io/f/myzgloqa">
 
-<input type="text" placeholder="Nombre completo">
+<div class="form-group">
+<label for="nombre">Nombre completo *</label>
+<input type="text" id="nombre" name="nombre" placeholder="Ej: Juan García" required>
+</div>
 
-<input type="tel" placeholder="Teléfono">
+<div class="form-group">
+<label for="telefono">Teléfono *</label>
+<input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 351 2345678" required pattern="[0-9+\s\-()]{10,}">
+</div>
 
-<input type="email" placeholder="Correo electrónico">
+<div class="form-group">
+<label for="email">Correo electrónico *</label>
+<input type="email" id="email" name="email" placeholder="Ej: tu@correo.com" required>
+</div>
 
-<textarea rows="5" placeholder="Mensaje"></textarea>
+<div class="form-group">
+<label for="especialidad">Especialidad de interés</label>
+<select id="especialidad" name="especialidad" style="padding:15px; border:2px solid #ddd; border-radius:10px; font-family:'Poppins',sans-serif; font-size:14px;">
+<option value="">Selecciona una especialidad</option>
+<option value="Psicología">Psicología</option>
+<option value="Pediatría">Pediatría</option>
+<option value="Nutrición">Nutrición</option>
+<option value="Odontología">Odontología</option>
+<option value="Kinesiología">Kinesiología</option>
+<option value="Fonoaudiología">Fonoaudiología</option>
+<option value="Consulta general">Consulta general</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="mensaje">Mensaje o consulta</label>
+<textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..."></textarea>
+</div>
 
 <button type="submit">
 Enviar Consulta
@@ -425,21 +724,59 @@ Enviar Consulta
 
 <footer>
 
+<div class="contact-info">
+<div class="contact-info-item">
+<span>📍 Ubicación</span>
+<p>Córdoba Capital, Argentina</p>
+</div>
+<div class="contact-info-item">
+<span>📞 Teléfono</span>
+<p><a href="tel:+5493512345678" style="color:white; text-decoration:none; transition:.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">+54 9 351 234-5678</a></p>
+</div>
+<div class="contact-info-item">
+<span>📧 Email</span>
+<p><a href="mailto:info@gruposalud.com" style="color:white; text-decoration:none; transition:.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">info@gruposalud.com</a></p>
+</div>
+</div>
+
 <h3>Grupo Salud Integral Ayacucho</h3>
 
-<br>
-
 <p>
-Córdoba Capital - Argentina
+Atención médica integral con más de 30 años de experiencia
 </p>
 
 <br>
 
-<p>
-© 2026 Todos los derechos reservados
+<p style="font-size:13px; opacity:0.8;">
+© 2026 Grupo Salud Integral Ayacucho. Todos los derechos reservados.
+</p>
+
+<p style="font-size:12px; opacity:0.7; margin-top:15px;">
+Última actualización: Septiembre 2026
 </p>
 
 </footer>
+
+<script>
+// Smooth scroll fallback para navegadores que no lo soportan
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && document.querySelector(href)) {
+      e.preventDefault();
+    }
+  });
+});
+
+// Validación básica del formulario
+document.querySelector('form[name="contacto"]').addEventListener('submit', function(e) {
+  const phone = document.getElementById('telefono').value;
+  if (phone.length < 10) {
+    e.preventDefault();
+    alert('Por favor ingresa un teléfono válido');
+  }
+});
+</script>
 
 </body>
 </html>
