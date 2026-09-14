@@ -1,146 +1,377 @@
-# 🏥 Grupo Salud Integral Ayacucho
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Sitio web profesional para **Grupo Salud Integral Ayacucho** - Más de 30 años de atención médica integral en Córdoba Capital.
+<title>Grupo Salud Integral Ayacucho</title>
 
-## 📋 Descripción
+<style>
 
-Este proyecto es un sitio web completo y responsivo para una clínica de salud que ofrece múltiples especialidades médicas, farmacia y asesoramiento profesional.
-
-**Ubicación:** Córdoba Capital, Argentina  
-**Experiencia:** 30+ años en atención integral  
-**Especialidades:** 10 disciplinas médicas diferentes
-
----
-
-## ✨ Características
-
-### 🎯 Secciones Principales
-
-- **Inicio (Hero):** Presentación profesional con llamada a la acción
-- **Especialidades:** 6 especialidades médicas destacadas:
-  - 🧠 Psicología
-  - 👨‍⚕️ Pediatría
-  - 🥗 Nutrición
-  - 🦷 Odontología
-  - 💪 Kinesiología
-  - 🗣️ Fonoaudiología
-
-- **Estadísticas:** Mostrar experiencia y compromiso
-- **Farmacia:** Información sobre servicios farmacéuticos
-- **Formulario de Contacto:** Solicitud de turnos online
-- **Footer:** Información de contacto
-
-### 🎨 Diseño
-
-- ✅ **Responsivo:** Funciona en desktop, tablet y móvil
-- ✅ **Moderno:** Colores corporativos profesionales
-- ✅ **Accesible:** Navegación intuitiva y clara
-- ✅ **Rápido:** Optimizado para carga veloz
-- ✅ **SEO Friendly:** Metadatos completos para posicionamiento
-
-### 🌐 Tecnología
-
-- **HTML5** semántico
-- **CSS3** con variables personalizadas
-- **JavaScript vanilla** para interactividad
-- **Responsive Design** con media queries
-- **Formspree** para gestión de formularios
-
----
-
-## 🚀 Cómo usar
-
-### 1. Ver el sitio online
-Tu sitio web está publicado en GitHub Pages:
-```
-https://daanieelrp35-ops.github.io/Grupo-de-salud-integral-ayacucho/
-```
-
-### 2. Estructura del proyecto
-```
-Grupo-de-salud-integral-ayacucho/
-├── index.html          # Página principal (sitio web completo)
-├── README.md           # Este archivo
-└── .gitignore          # Archivos a ignorar en Git
-```
-
-### 3. Personalización
-
-Puedes editar el archivo `index.html` para cambiar:
-
-#### 📝 Información de contacto
-```html
-<!-- Teléfono -->
-<p><a href="tel:+5493512345678">+54 9 351 234-5678</a></p>
-
-<!-- Email -->
-<p><a href="mailto:info@gruposalud.com">info@gruposalud.com</a></p>
-```
-
-#### 🎨 Colores corporativos
-```css
 :root{
-  --primary:#0F5BA7;        /* Azul principal */
-  --secondary:#28B463;      /* Verde secundario */
-  --light:#F5F7FA;
-  --dark:#1E293B;
-  --white:#FFFFFF;
+--primario:#0f6efd;
+--secundario:#00b4d8;
+--verde:#25D366;
+--fondo:#f5f8fb;
+--texto:#2d3436;
 }
-```
 
-#### 📸 Imagen hero
-```html
-<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" alt="...">
-```
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-#### 📧 Formulario de contacto
-```html
-<form action="https://formspree.io/f/myzgloqa" method="POST">
-```
+body{
+background:var(--fondo);
+color:var(--texto);
+}
 
----
+header{
+background:linear-gradient(135deg,#0f6efd,#00b4d8);
+color:white;
+padding:90px 20px;
+text-align:center;
+}
 
-## 📱 Características responsivas
+header h1{
+font-size:3rem;
+margin-bottom:15px;
+}
 
-El sitio se adapta automáticamente a:
-- 📱 Móviles (< 480px)
-- 📱 Tablets (480px - 768px)
-- 💻 Laptops (768px - 1024px)
-- 🖥️ Escritorios (> 1024px)
+header p{
+font-size:1.2rem;
+max-width:800px;
+margin:auto;
+}
 
----
+.hero-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:white;
+color:#0f6efd;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
 
-## 🔒 Seguridad & SEO
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
 
-✅ **Meta tags completos:**
-- Descripción
-- Palabras clave
-- Open Graph (redes sociales)
-- Favicon personalizado
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
 
-✅ **Validación de formularios:**
-- Campo de teléfono con patrón
-- Campos requeridos
-- Validación básica en JavaScript
+nav a{
+display:block;
+padding:15px;
+text-decoration:none;
+color:#0f6efd;
+font-weight:600;
+}
 
----
+nav a:hover{
+background:#0f6efd;
+color:white;
+}
 
-## 📞 Información de contacto
+section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-- **Teléfono:** +54 9 351 234-5678
-- **Email:** info@gruposalud.com
-- **Ubicación:** Córdoba Capital, Argentina
+.titulo{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#0f6efd;
+}
 
----
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
 
-## 📄 Licencia
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
 
-© 2026 Grupo Salud Integral Ayacucho. Todos los derechos reservados.
+.card:hover{
+transform:translateY(-8px);
+}
 
----
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
 
-## 🤝 Contribuciones
+.card-content{
+padding:20px;
+}
 
-Para sugerencias o mejoras, por favor contacta con el equipo.
+.card h3{
+margin-bottom:10px;
+color:#0f6efd;
+}
 
-**Última actualización:** Septiembre 2026
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:var(--verde);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+}
+
+.farmacia{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.farmacia ul{
+padding-left:20px;
+margin-top:20px;
+}
+
+footer{
+background:#0f6efd;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Grupo Salud Integral Ayacucho</h1>
+
+<p>
+Atención integral para toda la familia.
+Profesionales especializados comprometidos con tu bienestar.
+</p>
+
+<a class="hero-btn"
+href="https://wa.me/5493517692619"
+target="_blank">
+Solicitar Turno
+</a>
+
+</header>
+
+<nav>
+<ul>
+
+<li><a href="#especialidades">Especialidades</a></li>
+<li><a href="#farmacia">Farmacia</a></li>
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+</nav>
+
+<section id="especialidades">
+
+<h2 class="titulo">Nuestras Especialidades</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef">
+<div class="card-content">
+<h3>Psicología</h3>
+<p>Atención para niños, adolescentes y adultos.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="card-content">
+<h3>Psicopedagogía</h3>
+<p>Apoyo al aprendizaje y desarrollo integral.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559757175-5700dde675bc">
+<div class="card-content">
+<h3>Fonoaudiología</h3>
+<p>Evaluación y tratamiento del lenguaje y la comunicación.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514">
+<div class="card-content">
+<h3>Nutrición</h3>
+<p>Planes personalizados y educación alimentaria.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+<div class="card-content">
+<h3>Kinesiología</h3>
+<p>Rehabilitación física y recuperación funcional.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09">
+<div class="card-content">
+<h3>Odontología</h3>
+<p>Prevención, diagnóstico y tratamientos odontológicos.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb">
+<div class="card-content">
+<h3>Medicina Generalista</h3>
+<p>Control clínico, seguimiento y atención primaria.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580281657527-47f249e8f4df">
+<div class="card-content">
+<h3>Niñez y Adolescencia</h3>
+<p>Abordaje interdisciplinario para el desarrollo integral.</p>
+<a class="btn" href="https://wa.me/5493517692619">Consultar</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="farmacia">
+
+<h2 class="titulo">Farmacia Cruz Verde</h2>
+
+<div class="farmacia">
+
+<p>
+Un espacio pensado para brindar acompañamiento profesional y acceso a productos farmacéuticos esenciales.
+</p>
+
+<ul>
+<li>Dispensación de medicamentos.</li>
+<li>Control de glucemia.</li>
+<li>Aplicación de inyectables.</li>
+<li>Seguimiento farmacoterapéutico.</li>
+<li>Asesoramiento personalizado.</li>
+<li>Atención profesional.</li>
+</ul>
+
+<br>
+
+<a class="btn"
+href="https://wa.me/5493517692619">
+Contactar Farmacia
+</a>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<h2 class="titulo">Contacto</h2>
+
+<p style="text-align:center;font-size:1.2rem;">
+WhatsApp: 3517692619
+</p>
+
+<br>
+
+<div style="text-align:center;">
+
+<a class="btn"
+href="https://wa.me/5493517692619"
+target="_blank">
+Solicitar Turno
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Grupo Salud Integral Ayacucho</h3>
+
+<p>
+Atención integral para toda la familia
+</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/5493517692619"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
