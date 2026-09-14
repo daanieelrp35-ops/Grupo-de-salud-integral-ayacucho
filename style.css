@@ -1,0 +1,182 @@
+:root{
+--primario:#0f6efd;
+--secundario:#00b4d8;
+--verde:#25D366;
+--fondo:#f5f8fb;
+--texto:#2d3436;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--fondo);
+color:var(--texto);
+}
+
+header{
+background:linear-gradient(135deg,#0f6efd,#00b4d8);
+color:white;
+padding:90px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+header p{
+font-size:1.2rem;
+max-width:800px;
+margin:auto;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:white;
+color:#0f6efd;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav a{
+display:block;
+padding:15px;
+text-decoration:none;
+color:#0f6efd;
+font-weight:600;
+}
+
+nav a:hover{
+background:#0f6efd;
+color:white;
+}
+
+section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.titulo{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#0f6efd;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#0f6efd;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:var(--verde);
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+}
+
+.farmacia{
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.farmacia ul{
+padding-left:20px;
+margin-top:20px;
+}
+
+footer{
+background:#0f6efd;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+nav ul{
+flex-direction:column;
+}
+
+}
